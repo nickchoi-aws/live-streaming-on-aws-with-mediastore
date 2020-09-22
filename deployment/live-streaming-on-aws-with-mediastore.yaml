@@ -51,10 +51,11 @@ Parameters:
     NoEcho: true
 
   EncodingProfile:
-    Description: Select an encoding profile. HD 1080p [1920x1080, 1280x720, 960x540, 768x432, 640x360, 512x288] HD 720p [1280x720, 960x540, 768x432, 640x360, 512x288] SD 540p [960x540, 768x432, 640x360, 512x288]  See the implementation guide for details https://docs.aws.amazon.com/solutions/latest/live-streaming/considerations.html
+    Description: Select an encoding profile. UHD 4k [3840x1920, 2560x1280, 1920x960] HD 1080p [1920x1080, 1280x720, 960x540, 768x432, 640x360, 512x288] HD 720p [1280x720, 960x540, 768x432, 640x360, 512x288] SD 540p [960x540, 768x432, 640x360, 512x288]  See the implementation guide for details https://docs.aws.amazon.com/solutions/latest/live-streaming/considerations.html
     Type: String
-    Default: HD-720p
+    Default: UHD-4k
     AllowedValues:
+      - UHD-4k
       - HD-1080p
       - HD-720p
       - SD-540p

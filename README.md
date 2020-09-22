@@ -19,6 +19,7 @@ The solution supports RTP Push, RTMP push, HLS and [AWS Elemental Link](https://
 
 ## Encoding Profiles:
 
+* UHD-4k profile: 3840x1920, 2560x1280, 1920x960
 * HD-1080p profile: 1920x1080, 1280x720, 960x540, 768x432, 640x360, 512x288
 * HD-720p profile: 1280x720, 960x540, 768x432, 640x360, 512x288
 * SD-540p profile:  960x540, 768x432, 640x360, 512x288

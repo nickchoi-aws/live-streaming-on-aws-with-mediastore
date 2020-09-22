@@ -245,6 +245,7 @@ const createChannel = async (config) => {
     const medialive = new AWS.MediaLive({
         region: process.env.AWS_REGION
     });
+    const encode4k = require('./encoding-profiles/uhd-4k');
     const encode1080p = require('./encoding-profiles/hd-1080p');
     const encode720p = require('./encoding-profiles/hd-720p');
     const encode540p = require('./encoding-profiles/sd-540p');
@@ -285,6 +286,11 @@ const createChannel = async (config) => {
         }
 
         switch (config.EncodingProfile) {
+            case 'UHD-4k':
+                params.InputSpecification.Resolution = 'UHD';
+                params.InputSpecification.MaximumBitrate = 'MAX_20_MBPS';
+                params.EncoderSettings = encode4k;
+                break;
             case 'HD-1080p':
                 params.InputSpecification.Resolution = 'HD';
                 params.InputSpecification.MaximumBitrate = 'MAX_20_MBPS';
